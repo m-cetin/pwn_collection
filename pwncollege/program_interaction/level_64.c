@@ -4,6 +4,34 @@
 #include <sys/types.h>
 #include <sys/wait.h>
 
+/*
+                         +--------+
+                         | Child1 |               echo "oprqmylg" #expected string to solve
+                         +--------+             +-------------------+
+                            | (pipe1[1])  +---->|  Standard Output |
+                            +-------------+     +-------------------+
+                                       |
+                                       | (pipe1[0])
+                                       v
+                         +--------+
+                         | Child2 |               cat
+                         +--------+             +-------------------+
+   (pipe1[1])  +---->|  Standard Input  |  ---->|  Standard Output |
++-------------+     +-------------------+       +-------------------+
+        | (pipe2[0])                              |
+        v                                         |
+                         +--------+               |
+                         | Child3 |               |
+                         +--------+               |
+                         |  execlp |/challenge/embryoio_level64
+                         +--------+               |
+                                                  v
+                                           +-------------------+
+                                           |  Standard Output |
+                                           +-------------------+
+
+    */
+
 void pwncollege(){
     return;
 }
