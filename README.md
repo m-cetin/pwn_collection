@@ -1,1 +1,1 @@
-# pwn_collection
+# Collection of random pwn scripts 
