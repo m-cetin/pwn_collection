@@ -213,7 +213,7 @@ _start:
 .section .data
     # sockaddr_in struct
     sa_family_t: .word 2
-    bind_port: .word 0x5000
+    bind_port: .word 0x5000   # 0x5000 is port 80
     bind_address: .double 0x00000000
     pad: .byte 0,0,0,0,0,0,0,0
     # Buffers for reading data and storing filenames
